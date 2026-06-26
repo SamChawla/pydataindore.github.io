@@ -1,0 +1,28 @@
+# ============================================================
+#  Site-wide settings  (available everywhere as {{ site.* }})
+# ============================================================
+title: "PyData Indore | Data Science Community"
+description: "Central India's community for data scientists, ML practitioners, and open-source enthusiasts. Part of the global PyData network."
+url: "https://indore.pydata.org"
+
+# ============================================================
+#  Defaults — applied to every page so each page's front
+#  matter only needs the bits that are unique to it.
+# ============================================================
+defaults:
+  - scope:
+      path: ""           # everything
+    values:
+      layout: default                                   # use _layouts/default.html
+      image: /Assets/images/pydata_banner_logo.jpeg     # default social-share image
+
+# ============================================================
+#  Build settings
+# ============================================================
+# Files Jekyll should NOT copy into the built site.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .gitignore

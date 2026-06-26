@@ -1,1 +1,12 @@
 .claude/
+
+# Jekyll build output & caches — never commit these
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler
+Gemfile.lock
+vendor/
+.bundle/
