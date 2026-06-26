@@ -1,0 +1,25 @@
+<!-- Navigation — shared across every page. Highlight is driven by each
+     page's front-matter `active:` value (home|about|events|team|coc|sponsors). -->
+<nav class="nav">
+    <div class="nav-container">
+        <a href="/" class="nav-logo">
+            <img src="/Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png" alt="PyData Indore" class="logo-image">
+            <span class="logo-text">
+                <span class="logo-py">Py</span><span class="logo-data">Data</span>
+                <span class="logo-city">Indore</span>
+            </span>
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="/"                 class="{% if page.active == 'home' %}active{% endif %}">Home</a></li>
+            <li><a href="/about/"           class="{% if page.active == 'about' %}active{% endif %}">About</a></li>
+            <li><a href="/events/"          class="{% if page.active == 'events' %}active{% endif %}">Events</a></li>
+            <li><a href="/team/"            class="{% if page.active == 'team' %}active{% endif %}">Team</a></li>
+            <li><a href="/code-of-conduct/" class="{% if page.active == 'coc' %}active{% endif %}">Code of Conduct</a></li>
+            <li><a href="/sponsors/"        class="{% if page.active == 'sponsors' %}active{% endif %}">Sponsors</a></li>
+            <li><a href="/contact/" class="nav-cta">Get Involved</a></li>
+        </ul>
+    </div>
+</nav>

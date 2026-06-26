@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png">
+    <link rel="apple-touch-icon" href="/Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png">
+
+    {%- comment -%} Per-page values fall back to site-wide defaults {%- endcomment -%}
+    {%- assign page_title = page.title | default: site.title -%}
+    {%- assign page_desc  = page.description | default: site.description -%}
+    {%- assign page_image = page.image | prepend: site.url -%}
+
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_desc }}">
+
+    <!-- Open Graph / Social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ page_title }}">
+    <meta property="og:description" content="{{ page_desc }}">
+    <meta property="og:image" content="{{ page_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ page_title }}">
+    <meta name="twitter:description" content="{{ page_desc }}">
+    <meta name="twitter:image" content="{{ page_image }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/Assets/CSS/style.css">
+
+    {%- comment -%} Optional per-page stylesheet, e.g. hack-days.html sets:  extra_css: /Assets/CSS/hack-days.css {%- endcomment -%}
+    {% if page.extra_css %}<link rel="stylesheet" href="{{ page.extra_css }}">{% endif %}
+</head>
+<body>
+    <div class="grain"></div>
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    <script src="/Assets/JavaScript/main.js"></script>
+    {% if page.extra_js %}<script src="{{ page.extra_js }}"></script>{% endif %}
+</body>
+</html>
