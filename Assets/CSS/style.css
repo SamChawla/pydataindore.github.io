@@ -2267,6 +2267,84 @@ section {
 }
 
 /* ========================================
+   Guidelines / Framework Tables
+   ======================================== */
+.guidelines-table-wrap {
+    overflow-x: auto;
+    margin: var(--space-lg) 0 var(--space-xl);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+}
+
+.guidelines-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+    font-size: 0.95rem;
+}
+
+.guidelines-table th {
+    text-align: left;
+    padding: var(--space-md) var(--space-lg);
+    background: rgba(163, 230, 53, 0.06);
+    color: var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(163, 230, 53, 0.18);
+}
+
+.guidelines-table td {
+    padding: var(--space-md) var(--space-lg);
+    color: var(--color-gray-500);
+    line-height: 1.7;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    vertical-align: top;
+}
+
+.guidelines-table tr:last-child td {
+    border-bottom: none;
+}
+
+.guidelines-table td:first-child {
+    color: var(--color-gray-300);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.guidelines-table td.td-wrap:first-child {
+    white-space: normal;
+}
+
+.role-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-lg);
+    margin: var(--space-lg) 0 var(--space-xl);
+}
+
+.role-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.role-card h3 {
+    margin: 0 0 var(--space-xs);
+    color: var(--color-primary);
+}
+
+.role-card .role-meta {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-accent);
+    margin-bottom: var(--space-md);
+    display: block;
+}
+
+/* ========================================
    Events Page - Full Event Cards
    ======================================== */
 .events-filter {
