@@ -1,0 +1,679 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png">
+    <link rel="apple-touch-icon" href="Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png">
+    <title>PyData Indore Hack Days — Mini Hackathon | 18 July 2026</title>
+    <!-- Open Graph / Social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://indore.pydata.org/hack-days.html">
+    <meta property="og:title" content="PyData Indore Hack Days — Mini Hackathon">
+    <meta property="og:description" content="A one-day, in-person mini hackathon powered by MLH Hack Days. 18 July 2026 at SSi Digital, Indore. Build with Python & data. Free to join — teams of up to 4.">
+    <meta property="og:image" content="https://indore.pydata.org/Assets/images/pydata_banner_logo.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PyData Indore Hack Days — Mini Hackathon">
+    <meta name="twitter:description" content="A one-day, in-person mini hackathon powered by MLH Hack Days. 18 July 2026 at SSi Digital, Indore. Free to join — teams of up to 4.">
+    <meta name="twitter:image" content="https://indore.pydata.org/Assets/images/pydata_banner_logo.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="stylesheet" href="Assets/CSS/hack-days.css">
+</head>
+<body>
+    <div class="grain"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="Assets/images/Logos/PyData_Indore/PyData_Indore_512x341_transparent.png" alt="PyData Indore" class="logo-image">
+                <span class="logo-text">
+                    <span class="logo-py">Py</span><span class="logo-data">Data</span>
+                    <span class="logo-city">Indore</span>
+                </span>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html" class="active">Events</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html" class="nav-cta">Get Involved</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content hack-hero">
+                <img src="Assets/images/HackDays/hack-days-banner.png"
+                     alt="PyData Indore Hack Days — Major League Hacking · Hack Days Indore · Sponsored by SSi Digital · SSi Digital, Bhawarkua Main Rd, Indore · 18 July 2026, 10:30 AM – 5:30 PM"
+                     class="hack-banner" width="1774" height="887">
+                <div style="display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; margin-bottom: var(--space-lg);">
+                    <a href="events.html" style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-gray-600); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+                        Events
+                    </a>
+                    <span style="color: var(--color-gray-700); font-size: 0.75rem;">/</span>
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--color-gray-500);">Hack Days</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; margin-bottom: var(--space-lg);">
+                    <span class="event-type">Mini Hackathon</span>
+                    <span class="event-status upcoming">Upcoming</span>
+                    <span class="event-partner-badge">MLH Hack Days</span>
+                </div>
+                <h1 style="margin-bottom: var(--space-sm);">PyData Indore <span class="highlight">Hack Days</span></h1>
+                <p id="typing-headline" style="font-size: 1.15rem; color: var(--color-primary); font-family: var(--font-mono); margin-bottom: var(--space-md); letter-spacing: -0.01em; min-height: 1.6em;"></p>
+
+                <!-- Powered by — SSi Digital (main sponsor) -->
+                <div class="hack-poweredby">
+                    <span class="hack-poweredby-label">Powered by</span>
+                    <a href="https://online.ssidigital.in/" target="_blank" rel="noopener" class="hack-poweredby-logo is-primary" aria-label="SSi Digital Academy">
+                        <img src="Assets/images/HackDays/ssi_digital.png" alt="SSi Digital Academy">
+                    </a>
+                    <span class="hack-poweredby-label">in partnership with</span>
+                    <a href="https://mlh.io/" target="_blank" rel="noopener" class="hack-poweredby-logo is-secondary" aria-label="Major League Hacking">
+                        <img src="Assets/images/HackDays/mlh-white.svg" alt="MLH — Major League Hacking">
+                    </a>
+                </div>
+
+                <p class="section-text" style="max-width: 720px; margin-bottom: var(--space-lg);">
+                    A one-day, in-person mini hackathon for builders in Central India, brought to you by
+                    <strong style="color: var(--color-gray-200);">SSi Digital Academy</strong>. Form a team, pick a problem,
+                    and ship something real with Python &amp; data — from quick prototypes to clever ML hacks.
+                    Beginner-friendly, hands-on, and open to all skill levels.
+                </p>
+                <div class="event-detail-chips">
+                    <span class="event-detail-chip chip-primary">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        Sat, 18 July 2026
+                    </span>
+                    <span class="event-detail-chip">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                        10:30 AM – 5:30 PM IST
+                    </span>
+                    <span class="event-detail-chip">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                        </svg>
+                        SSi Digital, Indore
+                    </span>
+                    <span class="event-detail-chip">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        Teams up to 4
+                    </span>
+                    <span class="event-detail-chip">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                        </svg>
+                        Free Entry
+                    </span>
+                </div>
+                <div style="display: flex; gap: var(--space-md); flex-wrap: wrap; margin-top: var(--space-xl);">
+                    <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        Register on MLH
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#faq" class="btn btn-secondary btn-large">Read the FAQ</a>
+                </div>
+
+                <!-- Hero highlight callouts -->
+                <div class="hack-highlights">
+                    <div class="hack-highlight">
+                        <span class="hack-highlight-label">Format</span>
+                        <span class="hack-highlight-value">Offline<small>1-day · in-person</small></span>
+                    </div>
+                    <div class="hack-highlight">
+                        <span class="hack-highlight-label">Team Size</span>
+                        <span class="hack-highlight-value">1 – 4<small>solo or squad</small></span>
+                    </div>
+                    <div class="hack-highlight">
+                        <span class="hack-highlight-label">Perks</span>
+                        <span class="hack-highlight-value">Swag + Certs<small>MLH goodies &amp; more</small></span>
+                    </div>
+                    <div class="hack-highlight">
+                        <span class="hack-highlight-label">Who</span>
+                        <span class="hack-highlight-value">Students &amp; Pros<small>all skill levels</small></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-grid">
+                <div>
+                    <span class="section-tag">About the Event</span>
+                    <h2 class="section-title">Build. Ship. <span class="highlight">Repeat.</span></h2>
+                    <p class="section-text">
+                        PyData Indore Hack Days is a focused, single-day sprint where you turn an idea into a working
+                        prototype before sundown. No overnight marathons — just one high-energy day of hacking,
+                        mentorship, and demos with the local data &amp; Python community.
+                    </p>
+                    <p class="section-text">
+                        Whether you're writing your first Python script or shipping models to production, you'll find
+                        a team, a problem worth solving, and people to learn from. Come with an idea or find one here.
+                    </p>
+                    <div class="code-points" style="margin-top: var(--space-xl);">
+                        <div class="code-point"><span class="code-point-prefix">▸</span> One day, one prototype — no overnight stay required</div>
+                        <div class="code-point"><span class="code-point-prefix">▸</span> Open theme — build anything with Python &amp; data</div>
+                        <div class="code-point"><span class="code-point-prefix">▸</span> On-site mentors to unblock you fast</div>
+                        <div class="code-point"><span class="code-point-prefix">▸</span> Live demos &amp; community feedback</div>
+                        <div class="code-point"><span class="code-point-prefix">▸</span> MLH swag, certificates &amp; surprises 🎁</div>
+                    </div>
+                </div>
+                <div class="content-card">
+                    <h3>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                        What are MLH Hack Days?
+                    </h3>
+                    <p style="color: var(--color-gray-400); margin-bottom: var(--space-md);">
+                        <strong style="color: var(--color-gray-200);">Major League Hacking (MLH)</strong> is the official
+                        student hackathon league, powering thousands of events worldwide.
+                        <strong style="color: var(--color-gray-200);">Hack Days</strong> are short, local, beginner-friendly
+                        hackathons run by community organizers — like PyData Indore — with MLH support.
+                    </p>
+                    <ul>
+                        <li>Backed by MLH's global hackathon program</li>
+                        <li>Welcoming to first-time hackers</li>
+                        <li>Recognition &amp; swag from MLH</li>
+                        <li>A safe, inclusive space under the MLH Code of Conduct</li>
+                    </ul>
+                    <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener" class="btn btn-secondary" style="margin-top: var(--space-lg);">View on MLH</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHAT TO BUILD ==================== -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="topics-header">
+                <span class="section-tag">Tracks &amp; Ideas</span>
+                <h2 class="section-title">What Can You <span class="highlight">Build?</span></h2>
+                <p class="section-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
+                    The theme is open — anything goes, as long as it's powered by Python or data.
+                    Stuck for ideas? Start with one of these.
+                </p>
+            </div>
+            <div class="track-grid">
+                <div class="track-card">
+                    <span class="track-icon">🤖</span>
+                    <h3>AI &amp; ML Hacks</h3>
+                    <p>Train a model, fine-tune an LLM, or wire up an agent that does something genuinely useful.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">📊</span>
+                    <h3>Data for Good</h3>
+                    <p>Use open datasets to tackle a local civic, health, or environmental problem in Indore.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">📈</span>
+                    <h3>Dashboards &amp; Viz</h3>
+                    <p>Turn messy data into a clear, interactive story people can actually act on.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">⚙️</span>
+                    <h3>Automation &amp; Tools</h3>
+                    <p>Build a script, bot, or dev tool that kills a repetitive task once and for all.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">🧪</span>
+                    <h3>Open Source</h3>
+                    <p>Ship a useful library, plugin, or contribution the whole community can reuse.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">💡</span>
+                    <h3>Wildcard</h3>
+                    <p>Got a totally different idea? Bring it. Creativity is rewarded — surprise the judges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY PARTICIPATE ==================== -->
+    <section class="content-section">
+        <div class="container">
+            <div class="topics-header">
+                <span class="section-tag">Why Join</span>
+                <h2 class="section-title">More Than Just <span class="highlight">Code</span></h2>
+            </div>
+            <div class="track-grid">
+                <div class="track-card">
+                    <span class="track-icon">🎁</span>
+                    <h3>Swag &amp; Certificates</h3>
+                    <p>Take home MLH swag and a certificate of participation. Winners get extra goodies.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">🧑‍🏫</span>
+                    <h3>Mentorship</h3>
+                    <p>Get unblocked by experienced mentors from the PyData Indore community on-site.</p>
+                </div>
+                <div class="track-card">
+                    <span class="track-icon">🤝</span>
+                    <h3>Network</h3>
+                    <p>Meet developers, data folks, students, and recruiters from across Central India.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== JUDGING ==================== -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="topics-header">
+                <span class="section-tag">How You're Scored</span>
+                <h2 class="section-title">Judging <span class="highlight">Criteria</span></h2>
+                <p class="section-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
+                    Projects are evaluated on the day by our panel. Final weightings will be shared at kickoff.
+                </p>
+            </div>
+            <div class="criteria-grid">
+                <div class="criteria-card">
+                    <span class="criteria-num">01</span>
+                    <h4>Impact &amp; Usefulness</h4>
+                    <p>Does it solve a real problem? Would someone actually use it?</p>
+                </div>
+                <div class="criteria-card">
+                    <span class="criteria-num">02</span>
+                    <h4>Creativity &amp; Innovation</h4>
+                    <p>Is the idea original or a fresh take on a familiar problem?</p>
+                </div>
+                <div class="criteria-card">
+                    <span class="criteria-num">03</span>
+                    <h4>Technical Execution</h4>
+                    <p>How well is it built? Is the use of Python &amp; data thoughtful?</p>
+                </div>
+                <div class="criteria-card">
+                    <span class="criteria-num">04</span>
+                    <h4>Completeness</h4>
+                    <p>How much works end-to-end within the day's time box?</p>
+                </div>
+                <div class="criteria-card">
+                    <span class="criteria-num">05</span>
+                    <h4>User Experience</h4>
+                    <p>Is it usable, accessible, and nice to interact with?</p>
+                </div>
+                <div class="criteria-card">
+                    <span class="criteria-num">06</span>
+                    <h4>Presentation</h4>
+                    <p>How clearly does the team demo and explain their work?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SCHEDULE ==================== -->
+    <section class="content-section">
+        <div class="container">
+            <div class="event-detail-layout">
+                <div class="event-detail-main">
+
+                    <!-- Schedule -->
+                    <div style="margin-bottom: var(--space-4xl);">
+                        <span class="section-tag">Agenda</span>
+                        <h2 class="section-title" style="margin-bottom: var(--space-sm);">Day <span class="highlight">Schedule</span></h2>
+                        <p class="section-text" style="margin-bottom: 0;">Tentative timeline — exact slots will be confirmed closer to the event.</p>
+                        <div class="schedule-timeline">
+                            <div class="schedule-item">
+                                <div class="schedule-time">10:30–11:00</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Check-In &amp; Setup</div>
+                                    <div class="schedule-meta">Registration · Teams settle in (teams are formed at sign-up)</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">11:00–11:30</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Kickoff &amp; Briefing</div>
+                                    <div class="schedule-meta">Rules, tracks, judging criteria &amp; MLH welcome</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">11:30–4:00</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Hacking 🚀</div>
+                                    <div class="schedule-meta">Build time · Mentor check-ins · Lunch &amp; refreshments 🍕🍔</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">4:00–4:45</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Project Demos</div>
+                                    <div class="schedule-meta">Teams present to judges &amp; the community</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">4:45–5:15</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Judging &amp; Results</div>
+                                    <div class="schedule-meta">Winners announced · Swag &amp; certificates</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">5:15–5:30</div>
+                                <div class="schedule-content">
+                                    <div class="schedule-title">Wrap-Up &amp; Networking</div>
+                                    <div class="schedule-meta">Group photo · Connect · Head home</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Venue -->
+                    <div>
+                        <span class="section-tag">Venue</span>
+                        <h2 class="section-title" style="margin-bottom: var(--space-sm);">Where to <span class="highlight">Find Us</span></h2>
+                        <div class="venue-card">
+                            <div class="venue-detail">
+                                <h4>Venue</h4>
+                                <p>SSi Digital<br>Indore, Madhya Pradesh</p>
+                            </div>
+                            <div class="venue-detail">
+                                <h4>Address</h4>
+                                <p>11 Bhawarkua Main Rd, Professor Colony<br>Indore – 452014<br>Madhya Pradesh</p>
+                            </div>
+                            <div class="venue-detail">
+                                <h4>Getting There</h4>
+                                <p>
+                                    <a href="https://maps.google.com/?q=SSi+Digital,+11+Bhawarkua+Main+Rd,+Professor+Colony,+Indore,+Madhya+Pradesh+452014" target="_blank" rel="noopener"
+                                       style="color: var(--color-primary); text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                        Open in Google Maps
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="venue-detail">
+                                <h4>What to Bring</h4>
+                                <p>Your laptop, charger &amp; a valid ID</p>
+                            </div>
+                        </div>
+
+                        <!-- Good to Know -->
+                        <div class="hack-notes">
+                            <h4>⚡ Good to Know</h4>
+                            <ul>
+                                <li><span class="note-ico">👥</span><span><strong style="color: var(--color-gray-100);">Team details at sign-up.</strong> You'll need to provide your team details — team name and members (up to 4) — while filling out the registration form.</span></li>
+                                <li><span class="note-ico">🔌</span><span><strong style="color: var(--color-gray-100);">Charging points are limited.</strong> Come fully charged, carry a power bank, and plan accordingly.</span></li>
+                                <li><span class="note-ico">📶</span><span><strong style="color: var(--color-gray-100);">Keep a backup internet connection.</strong> Wi-Fi will be provided, but please have a mobile hotspot ready in case of any Wi-Fi issues.</span></li>
+                                <li><span class="note-ico">💻</span><span><strong style="color: var(--color-gray-100);">Bring your essentials.</strong> Laptop, charger, and a valid photo ID are a must.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="event-detail-sidebar">
+                    <h3 style="font-size: 1rem; margin-bottom: var(--space-lg);">Event Info</h3>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Date</span>
+                        <span class="event-sidebar-value highlight">Sat, 18 Jul 2026</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Time</span>
+                        <span class="event-sidebar-value">10:30 AM – 5:30 PM</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Format</span>
+                        <span class="event-sidebar-value">In-person</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Venue</span>
+                        <span class="event-sidebar-value">SSi Digital, Indore</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Team Size</span>
+                        <span class="event-sidebar-value">1 – 4 members</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Entry</span>
+                        <span class="event-sidebar-value highlight">Free</span>
+                    </div>
+                    <div class="event-sidebar-row">
+                        <span class="event-sidebar-label">Register</span>
+                        <span class="event-sidebar-value">via MLH</span>
+                    </div>
+                    <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener" class="btn btn-primary"
+                       style="width: 100%; justify-content: center; margin-top: var(--space-xl);">
+                        Register Now
+                    </a>
+                    <p style="text-align: center; font-family: var(--font-mono); font-size: 0.68rem; color: var(--color-gray-600); margin-top: var(--space-sm);">
+                        Registration via the MLH platform
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SPONSOR & PARTNERS ==================== -->
+    <section class="content-section alt-bg">
+        <div class="container">
+            <div class="topics-header">
+                <span class="section-tag">Sponsors &amp; Partners</span>
+                <h2 class="section-title">Powered <span class="highlight">By</span></h2>
+            </div>
+
+            <!-- Official Sponsor spotlight -->
+            <div class="sponsor-spotlight">
+                <div style="flex: 0 0 auto;">
+                    <a href="https://online.ssidigital.in/" target="_blank" rel="noopener" class="sponsor-spotlight-logo" aria-label="SSi Digital Academy">
+                        <img src="Assets/images/HackDays/ssi_digital.png" alt="SSi Digital Academy">
+                    </a>
+                </div>
+                <div style="flex: 1 1 280px;">
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+                        <h3 style="margin: 0;">SSi Digital Academy</h3>
+                        <span class="event-status upcoming" style="font-size: 0.7rem; padding: 2px 12px;">Official Sponsor</span>
+                        <span class="event-status completed" style="font-size: 0.7rem; padding: 2px 12px;">Venue Partner</span>
+                    </div>
+                    <p style="color: var(--color-gray-400); margin-bottom: var(--space-md);">
+                        SSi Digital Academy — a leading Indore institute for full-stack, data analytics, and programming
+                        courses — is the official sponsor and host venue for PyData Indore Hack Days, providing the space
+                        and support that make the day possible.
+                    </p>
+                    <a href="https://online.ssidigital.in/" target="_blank" rel="noopener noreferrer" class="link-arrow" style="display: inline-flex;">
+                        Visit SSi Digital
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Partner badges -->
+            <div class="partners-grid" style="margin-top: var(--space-2xl);">
+                <div class="partner-item">
+                    <div class="partner-logo-box partner-logo-box-hd">
+                        <a href="https://online.ssidigital.in/" target="_blank" rel="noopener">
+                            <img src="Assets/images/HackDays/ssi_digital.png" alt="SSi Digital Academy">
+                        </a>
+                    </div>
+                    <span class="partner-role-label">Official Sponsor &amp; Venue</span>
+                </div>
+                <div class="partner-item">
+                    <div class="partner-logo-box partner-logo-box-hd">
+                        <a href="https://mlh.io/" target="_blank" rel="noopener">
+                            <img src="Assets/images/HackDays/mlh-white.svg" alt="MLH — Major League Hacking">
+                        </a>
+                    </div>
+                    <span class="partner-role-label">Hack Days Program</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="content-section" id="faq">
+        <div class="container" style="max-width: 820px;">
+            <div class="topics-header">
+                <span class="section-tag">Questions</span>
+                <h2 class="section-title">Frequently <span class="highlight">Asked</span></h2>
+            </div>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Who can participate?</summary>
+                    <div class="faq-answer">Anyone keen to build — students and working professionals alike. All skill levels are welcome, including complete beginners.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Do I need prior hackathon or AI experience?</summary>
+                    <div class="faq-answer">Not at all. Hack Days are designed to be beginner-friendly. If you can write a bit of Python (or are willing to learn on the day), you'll be fine. Mentors will be around to help.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>How much does it cost?</summary>
+                    <div class="faq-answer">It's completely free to participate. Just register on MLH and show up.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I participate solo or do I need a team?</summary>
+                    <div class="faq-answer">Both work. You can hack solo or form a team of up to 4 members. Note that you'll need to enter your team details — team name and members — when you fill out the registration form, so sort out your team before registering.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>What should I bring?</summary>
+                    <div class="faq-answer">Your laptop, charger (and ideally a power bank), and a valid photo ID. Charging points are limited, so come fully charged. Wi-Fi will be provided, but keep a backup internet connection (mobile hotspot) handy just in case.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Is there a fixed theme?</summary>
+                    <div class="faq-answer">The theme is open — build anything powered by Python or data. Check the <a href="#" onclick="document.querySelector('.track-grid').scrollIntoView({behavior:'smooth'});return false;">Tracks &amp; Ideas</a> section for inspiration.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I use existing code or AI tools?</summary>
+                    <div class="faq-answer">You should build your project during the event, but you may use open-source libraries, frameworks, and AI coding assistants. Just be ready to explain your work to the judges.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I register?</summary>
+                    <div class="faq-answer">Register on the official <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener">MLH event page</a>. You'll be asked a few quick questions, including whether you're participating individually or as a team.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Hack?</h2>
+                <p>Grab your spot for PyData Indore Hack Days. Bring an idea, bring a friend — let's build something on 18 July.</p>
+                <div class="cta-actions">
+                    <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+                        Register on MLH
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="events.html" class="btn btn-secondary btn-large">View All Events</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-py">Py</span><span class="logo-data">Data</span>
+                        <span class="logo-city">Indore</span>
+                    </a>
+                    <p>Part of the global PyData network, an educational program of NumFOCUS, a 501(c)(3) nonprofit.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/company/pydata-indore" target="_blank" aria-label="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/pydata.indore/" target="_blank" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://github.com/pydataindore" target="_blank" aria-label="GitHub">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.meetup.com/pydata-indore/" target="_blank" aria-label="Meetup">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19.24 12.1a6.65 6.65 0 0 1-1.12 3.71 6.73 6.73 0 0 1-2.93 2.45 6.74 6.74 0 0 1-3.73.46 6.69 6.69 0 0 1-3.3-1.62 6.67 6.67 0 0 1-1.87-3.13 6.7 6.7 0 0 1 .22-3.74 6.72 6.72 0 0 1 2.21-3.07A6.72 6.72 0 0 1 12 5.64a6.7 6.7 0 0 1 3.38.91 6.7 6.7 0 0 1 2.47 2.47 6.65 6.65 0 0 1 1.39 3.08z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="code-of-conduct.html">Code of Conduct</a></li>
+                        <li><a href="sponsors.html">Sponsors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://pydata.org" target="_blank">PyData Global</a></li>
+                        <li><a href="https://numfocus.org" target="_blank">NumFOCUS</a></li>
+                        <li><a href="https://github.com/pydataindore" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="contact.html#volunteer">Volunteer</a></li>
+                        <li><a href="volunteer.html">Volunteer Guidelines</a></li>
+                        <li><a href="events.html#propose">Propose an Event</a></li>
+                        <li><a href="sponsors.html">Sponsor Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PyData Indore. An educational program of <a href="https://numfocus.org" target="_blank">NumFOCUS</a>, a 501(c)(3) nonprofit.</p>
+                <p class="footer-credits">Made with ❤️ by the PyData Indore community</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Assets/JavaScript/main.js"></script>
+    <script>
+        (function () {
+            var el = document.getElementById('typing-headline');
+            if (!el) return;
+            var text = 'One day. One prototype. Build something real with Python & data.';
+            var i = 0;
+            function type() {
+                if (i < text.length) {
+                    el.textContent += text[i++];
+                    setTimeout(type, 38);
+                } else {
+                    el.classList.add('done');
+                }
+            }
+            setTimeout(type, 600);
+        })();
+    </script>
+</body>
+</html>
