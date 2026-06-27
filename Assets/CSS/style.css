@@ -844,10 +844,10 @@ body.has-announcement .nav {
     display: inline-flex;
     align-items: center;
     gap: var(--space-sm);
-    padding: var(--space-md) var(--space-xl);
+    padding: 0.7rem 1.5rem;
     border-radius: var(--radius-full);
     font-weight: 700;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     transition: all var(--transition-fast);
     cursor: pointer;
     border: none;
@@ -912,8 +912,8 @@ body.has-announcement .nav {
 }
 
 .btn-large {
-    padding: var(--space-lg) var(--space-2xl);
-    font-size: 1rem;
+    padding: 0.9rem 2rem;
+    font-size: 0.95rem;
 }
 
 .btn:disabled,
@@ -2781,9 +2781,9 @@ section {
 .t-keyword  { color: var(--color-accent); }
 .t-module   { color: var(--color-primary); }
 .t-var      { color: #e2e8f0; }
-.t-string   { color: #86efac; }
-.t-number   { color: #fb923c; }
-.t-fn       { color: #93c5fd; }
+.t-string   { color: var(--color-primary-light); }
+.t-number   { color: var(--color-accent-light); }
+.t-fn       { color: var(--color-primary); }
 .t-op       { color: #525252; }
 .t-output   { color: #525252; }
 .t-success  { color: var(--color-primary); }
