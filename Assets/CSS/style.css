@@ -3633,7 +3633,10 @@ section {
     position: fixed;
     bottom: var(--space-lg);
     left: var(--space-lg);
-    z-index: 1000;
+    /* Above the floating theme switcher (z-index 10000) so its Accept/Decline
+       buttons stay tappable — on mobile the banner and the switcher share the
+       bottom-right corner and the switcher was intercepting the taps. */
+    z-index: 10001;
     max-width: 420px;
     display: flex;
     flex-direction: column;
