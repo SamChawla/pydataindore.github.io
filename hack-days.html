@@ -34,7 +34,26 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                         <span class="event-status upcoming">Upcoming</span>
                         <span class="event-partner-badge">MLH Hack Days</span>
                     </div>
-                    <h1 style="margin-bottom: var(--space-sm);">PyData Indore <span class="highlight">Hack Days</span></h1>
+                    <!-- Title with the SSi Digital sponsor credit pinned beside it -->
+                    <div class="hack-hero-title-row">
+                        <h1>PyData Indore <span class="highlight">Hack Days</span></h1>
+                        <div class="hack-hero-sponsor">
+                            <span class="hack-poweredby-label">Powered by</span>
+                            <a href="https://online.ssidigital.in/" target="_blank" rel="noopener" class="hack-hero-sponsor-logo" aria-label="SSi Digital Academy">
+                                <img src="/Assets/images/HackDays/ssi_digital.png" alt="SSi Digital Academy">
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- In partnership with — MLH -->
+                    <div class="hack-hero-partner">
+                        <span class="hack-poweredby-label">In partnership with</span>
+                        <a href="https://mlh.io/" target="_blank" rel="noopener" class="hack-poweredby-logo is-secondary" aria-label="Major League Hacking">
+                            <img src="/Assets/images/HackDays/mlh-white.svg" alt="MLH — Major League Hacking">
+                        </a>
+                        <span class="hack-poweredby-tag">Flagship Hack Days</span>
+                    </div>
+
                     <p id="typing-headline" style="font-size: 1.15rem; color: var(--color-primary); font-family: var(--font-mono); margin-bottom: var(--space-md); letter-spacing: -0.01em; min-height: 1.6em;">One day. One prototype. Build something real with Python &amp; data.</p>
 
                     <p class="section-text" style="margin-bottom: var(--space-lg);">
@@ -117,20 +136,6 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                     </div>
                   </aside>
                 </div><!-- /.hack-hero-grid -->
-
-                <!-- Powered by — SSi Digital (main sponsor) + MLH -->
-                <div class="hack-poweredby">
-                    <span class="hack-poweredby-label">Powered by</span>
-                    <a href="https://online.ssidigital.in/" target="_blank" rel="noopener" class="hack-poweredby-logo is-primary" aria-label="SSi Digital Academy">
-                        <img src="/Assets/images/HackDays/ssi_digital.png" alt="SSi Digital Academy">
-                    </a>
-                    <span class="hack-poweredby-sep" aria-hidden="true"></span>
-                    <span class="hack-poweredby-label">In partnership with</span>
-                    <a href="https://mlh.io/" target="_blank" rel="noopener" class="hack-poweredby-logo is-secondary" aria-label="Major League Hacking">
-                        <img src="/Assets/images/HackDays/mlh-white.svg" alt="MLH — Major League Hacking">
-                    </a>
-                    <span class="hack-poweredby-tag">Flagship Hack Days</span>
-                </div>
             </div>
         </div>
     </header>
@@ -189,43 +194,95 @@ image: "/Assets/images/HackDays/ssi_digital.png"
         <div class="container">
             <div class="topics-header">
                 <span class="section-tag">Tracks &amp; Ideas</span>
-                <h2 class="section-title">What Can You <span class="highlight">Build?</span></h2>
-                <p class="section-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
-                    The theme is open — anything goes, as long as it's powered by Python or data.
-                    Stuck for ideas? Start with one of these.
+                <h2 class="section-title">Pick a <span class="highlight">Track</span></h2>
+                <p class="section-text" style="text-align: center; max-width: 680px; margin: 0 auto;">
+                    Three tracks, one goal — build something a real person would actually use. The ideas
+                    below are here to spark thinking, not to box you in.
                 </p>
             </div>
-            <div class="track-grid">
-                <div class="track-card">
-                    <span class="track-icon">🤖</span>
-                    <h3>AI &amp; ML Hacks</h3>
-                    <p>Train a model, fine-tune an LLM, or wire up an agent that does something genuinely useful.</p>
-                </div>
-                <div class="track-card">
-                    <span class="track-icon">📊</span>
-                    <h3>Data for Good</h3>
-                    <p>Use open datasets to tackle a local civic, health, or environmental problem in Indore.</p>
-                </div>
-                <div class="track-card">
-                    <span class="track-icon">📈</span>
-                    <h3>Dashboards &amp; Viz</h3>
-                    <p>Turn messy data into a clear, interactive story people can actually act on.</p>
-                </div>
-                <div class="track-card">
-                    <span class="track-icon">⚙️</span>
-                    <h3>Automation &amp; Tools</h3>
-                    <p>Build a script, bot, or dev tool that kills a repetitive task once and for all.</p>
-                </div>
-                <div class="track-card">
-                    <span class="track-icon">🧪</span>
-                    <h3>Open Source</h3>
-                    <p>Ship a useful library, plugin, or contribution the whole community can reuse.</p>
-                </div>
-                <div class="track-card">
-                    <span class="track-icon">💡</span>
-                    <h3>Wildcard</h3>
-                    <p>Got a totally different idea? Bring it. Creativity is rewarded — surprise the judges.</p>
-                </div>
+
+            <div class="hack-tracks">
+                <!-- Track 1 -->
+                <article class="hack-track">
+                    <div class="hack-track-head">
+                        <span class="track-icon">🎓</span>
+                        <div>
+                            <span class="hack-track-num">Track 1</span>
+                            <h3>Learn Better</h3>
+                        </div>
+                    </div>
+                    <p class="hack-track-desc">
+                        Tools that improve how people learn, teach, or upskill. Build for a real learner or
+                        teacher, not an abstract audience — a study group, a junior batch, a community member
+                        prepping for a talk.
+                    </p>
+                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <ul class="hack-track-ideas">
+                        <li>AI study companion that generates practice problems from lecture notes</li>
+                        <li>Code review bot for beginners learning Python</li>
+                        <li>Curriculum generator that turns a YouTube playlist or PDF into a structured learning path</li>
+                        <li>Personalized quiz builder that adapts to what you got wrong</li>
+                        <li>Tool that converts documentation into interactive tutorials</li>
+                    </ul>
+                </article>
+
+                <!-- Track 2 -->
+                <article class="hack-track">
+                    <div class="hack-track-head">
+                        <span class="track-icon">⚡</span>
+                        <div>
+                            <span class="hack-track-num">Track 2</span>
+                            <h3>Ship Faster</h3>
+                        </div>
+                    </div>
+                    <p class="hack-track-desc">
+                        Developer productivity tools that plug into workflows developers already use —
+                        CLI, VS Code, GitHub, Jupyter.
+                    </p>
+                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <ul class="hack-track-ideas">
+                        <li>Project scaffolder that sets up a full repo with CI, linting, and README in one command</li>
+                        <li>CLI utility that automates a repetitive dev task</li>
+                        <li>MCP server that connects an LLM to a useful data source</li>
+                        <li>Notebook-to-blog converter that turns <code>.ipynb</code> into a publishable post</li>
+                        <li>Code documentation generator that reads your codebase and writes the docs</li>
+                        <li>Data pipeline helper that automates CSV cleaning and validation</li>
+                    </ul>
+                </article>
+
+                <!-- Track 3 -->
+                <article class="hack-track">
+                    <div class="hack-track-head">
+                        <span class="track-icon">📱</span>
+                        <div>
+                            <span class="hack-track-num">Track 3</span>
+                            <h3>Daily Drivers</h3>
+                        </div>
+                    </div>
+                    <p class="hack-track-desc">
+                        Personal and professional tools for everyday use — projects that integrate with tools
+                        people already open daily, like WhatsApp, Slack, or a browser, will stand out.
+                    </p>
+                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <ul class="hack-track-ideas">
+                        <li>Dynamic resume builder that pulls from LinkedIn/GitHub and generates tailored resumes</li>
+                        <li>Expense tracker with natural language input (“spent 200 on chai today”)</li>
+                        <li>Content scheduler that drafts and queues social media posts</li>
+                        <li>Bookmark organizer that auto-tags and summarizes saved links</li>
+                        <li>Meeting summarizer that turns transcripts into action items</li>
+                        <li>Event management tool for community organizers</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Cross-cutting prize -->
+            <div class="hack-prize-callout">
+                <span class="hack-prize-badge">🏆 Cross-cutting Prize</span>
+                <h3>Best Use of Gemini API</h3>
+                <p>
+                    Open to any team from any track. Use the Google Gemini API meaningfully in your project
+                    to be eligible. This is MLH's partner prize category — you opt in when you submit on Devpost.
+                </p>
             </div>
         </div>
     </section>
@@ -264,41 +321,88 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                 <span class="section-tag">How You're Scored</span>
                 <h2 class="section-title">Judging <span class="highlight">Criteria</span></h2>
                 <p class="section-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
-                    Projects are evaluated on the day by our panel. Final weightings will be shared at kickoff.
+                    Teams are judged on four criteria, weighted equally.
                 </p>
             </div>
-            <div class="criteria-grid">
+            <div class="criteria-grid criteria-grid-4">
                 <div class="criteria-card">
-                    <span class="criteria-num">01</span>
-                    <h4>Impact &amp; Usefulness</h4>
-                    <p>Does it solve a real problem? Would someone actually use it?</p>
+                    <span class="criteria-num">25%</span>
+                    <h4>Technology</h4>
+                    <p>How technically solid is the hack? Did the team tackle a meaningful technical challenge? Does it use tools and APIs effectively — not just impressively, but appropriately?</p>
                 </div>
                 <div class="criteria-card">
-                    <span class="criteria-num">02</span>
-                    <h4>Creativity &amp; Innovation</h4>
-                    <p>Is the idea original or a fresh take on a familiar problem?</p>
+                    <span class="criteria-num">25%</span>
+                    <h4>Design &amp; Usability</h4>
+                    <p>Did the team think about who will actually use this? Is it intuitive? Does it look like something a person would want to open a second time?</p>
                 </div>
                 <div class="criteria-card">
-                    <span class="criteria-num">03</span>
-                    <h4>Technical Execution</h4>
-                    <p>How well is it built? Is the use of Python &amp; data thoughtful?</p>
+                    <span class="criteria-num">25%</span>
+                    <h4>Completion</h4>
+                    <p>Does it work? A focused, working feature beats a grand vision with a broken demo every time. Shipped &gt; Ambitious.</p>
                 </div>
                 <div class="criteria-card">
-                    <span class="criteria-num">04</span>
-                    <h4>Completeness</h4>
-                    <p>How much works end-to-end within the day's time box?</p>
-                </div>
-                <div class="criteria-card">
-                    <span class="criteria-num">05</span>
-                    <h4>User Experience</h4>
-                    <p>Is it usable, accessible, and nice to interact with?</p>
-                </div>
-                <div class="criteria-card">
-                    <span class="criteria-num">06</span>
-                    <h4>Presentation</h4>
-                    <p>How clearly does the team demo and explain their work?</p>
+                    <span class="criteria-num">25%</span>
+                    <h4>Real-World Usefulness</h4>
+                    <p>What makes this hackathon different. Can you name the person who would use this? Would <em>you</em> use it next week? Projects with a clear, named user and a real chance of surviving past demo day score higher.</p>
                 </div>
             </div>
+
+            <!-- What we don't judge on -->
+            <div class="hack-nojudge">
+                <h4>What we explicitly <span class="highlight">don't</span> judge on</h4>
+                <ul>
+                    <li><span class="note-ico">🧹</span><span>Code cleanliness or comment quality — it's a hackathon, not a code review.</span></li>
+                    <li><span class="note-ico">🎤</span><span>Pitch polish — this is about building, not selling.</span></li>
+                    <li><span class="note-ico">💡</span><span>How “innovative” the idea is — a well-executed boring idea beats a broken novel one.</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SUBMISSIONS ==================== -->
+    <section class="content-section" id="submissions">
+        <div class="container" style="max-width: 940px;">
+            <div class="topics-header">
+                <span class="section-tag">Submissions</span>
+                <h2 class="section-title">How to <span class="highlight">Submit</span></h2>
+                <p class="section-text" style="text-align: center; max-width: 660px; margin: 0 auto;">
+                    To be eligible for judging, every team submits their project on Devpost. Here's exactly
+                    what you'll need — the Devpost link is shared at kickoff and on the MLH event page.
+                </p>
+            </div>
+            <div class="submit-grid">
+                <div class="submit-card">
+                    <h4>Required fields</h4>
+                    <ul>
+                        <li>Project title</li>
+                        <li>Track (Learn Better / Ship Faster / Daily Drivers)</li>
+                        <li>Description — what you built, who it's for, and why they'd use it</li>
+                        <li>Demo video (2–3 min max — show the product working, not a slide deck)</li>
+                        <li>Screenshots (at least 2)</li>
+                        <li>Link to source code (GitHub/GitLab — accessible to judges)</li>
+                        <li>Tech stack used</li>
+                        <li>Team members and their roles</li>
+                    </ul>
+                </div>
+                <div class="submit-card">
+                    <h4>AI disclosure <span class="submit-req">required</span></h4>
+                    <ul>
+                        <li>Which generative AI tools did you use? (Gemini, OpenAI, Anthropic, Hugging Face, Llama, DeepSeek, none, or other)</li>
+                        <li>How did you use AI? Describe what was AI-generated vs. what you built. If none, write “N/A”.</li>
+                    </ul>
+                </div>
+                <div class="submit-card">
+                    <h4>For the Gemini API prize</h4>
+                    <ul>
+                        <li>Opt in to the “Best Use of Gemini API” prize category</li>
+                        <li>Provide your Gemini API Key Project Number</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="submit-note">
+                Note: specific prize items are provided by MLH and confirmed closer to the event. Prize packs
+                typically include stickers, pins, and partner swag.
+            </p>
         </div>
     </section>
 
@@ -523,37 +627,89 @@ image: "/Assets/images/HackDays/ssi_digital.png"
             </div>
             <div class="faq-list">
                 <details class="faq-item">
-                    <summary>Who can participate?</summary>
-                    <div class="faq-answer">Anyone keen to build — students and working professionals alike. All skill levels are welcome, including complete beginners.</div>
+                    <summary>Do I need to know how to code?</summary>
+                    <div class="faq-answer">Some coding experience helps since this is a build event, but you don't need to be an expert. Teams benefit from diverse skills — design, research, project management, and domain expertise are all valuable.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Do I need prior hackathon or AI experience?</summary>
-                    <div class="faq-answer">Not at all. Hack Days are designed to be beginner-friendly. If you can write a bit of Python (or are willing to learn on the day), you'll be fine. Mentors will be around to help.</div>
+                    <summary>Do I need a team?</summary>
+                    <div class="faq-answer">No. You can participate solo or form a team of up to 4. We'll have a team-formation session at the start if you show up without one. Note that you'll enter your team details on the registration form, so sort out your team before registering if you can.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>How much does it cost?</summary>
-                    <div class="faq-answer">It's completely free to participate. Just register on MLH and show up.</div>
+                    <summary>Is this only for students?</summary>
+                    <div class="faq-answer">No. MLH Hack Days are open to everyone — students, professionals, freelancers, and career-switchers. All skill levels are welcome.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Can I participate solo or do I need a team?</summary>
-                    <div class="faq-answer">Both work. You can hack solo or form a team of up to 4 members. Note that you'll need to enter your team details — team name and members — when you fill out the registration form, so sort out your team before registering.</div>
+                    <summary>Do I need to register on MLH?</summary>
+                    <div class="faq-answer">Yes. <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener">MLH registration</a> is mandatory for check-in, swag, and prize eligibility — a Meetup RSVP alone is not sufficient. If the MLH link isn't loading, you can also register via our <a href="https://www.meetup.com/pydata-indore/events/315411081/" target="_blank" rel="noopener">Meetup event page</a>.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I use AI tools like ChatGPT, Copilot, or Gemini?</summary>
+                    <div class="faq-answer">Yes, but you must disclose all AI tool usage in your submission. Your README should clearly document what was AI-generated vs. what you built. Undisclosed AI usage means disqualification.</div>
                 </details>
                 <details class="faq-item">
                     <summary>What should I bring?</summary>
-                    <div class="faq-answer">Your laptop, charger (and ideally a power bank), and a valid photo ID. Charging points are limited, so come fully charged. Wi-Fi will be provided, but keep a backup internet connection (mobile hotspot) handy just in case.</div>
+                    <div class="faq-answer">Your laptop, charger, and any hardware you want to hack with. Charging points are limited, so come fully charged and ideally carry a power bank. We'll provide food, Wi-Fi, and MLH swag — but keep a mobile hotspot handy as a backup connection.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Is there a fixed theme?</summary>
-                    <div class="faq-answer">The theme is open — build anything powered by Python or data. Check the <a href="#tracks">Tracks &amp; Ideas</a> section for inspiration.</div>
+                    <summary>Is there food?</summary>
+                    <div class="faq-answer">Yes — lunch and snacks will be provided. If you have dietary restrictions, reach out to us in advance at <a href="mailto:indore@pydata.org">indore@pydata.org</a>.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>Can I use existing code or AI tools?</summary>
-                    <div class="faq-answer">You should build your project during the event, but you may use open-source libraries, frameworks, and AI coding assistants. Just be ready to explain your work to the judges.</div>
+                    <summary>Where do I submit my project?</summary>
+                    <div class="faq-answer">On our Devpost page — the link is shared at kickoff and on the MLH event page. Submissions open at kickoff and close before demos begin (around 4:00 PM IST) on 18 July. See the <a href="#submissions">Submissions</a> section for the full checklist.</div>
                 </details>
                 <details class="faq-item">
-                    <summary>How do I register?</summary>
-                    <div class="faq-answer">Register on the official <a href="https://events.mlh.com/events/14415-pydata-indore-hack-days" target="_blank" rel="noopener">MLH event page</a>. If the MLH link isn't loading for you, you can register on our <a href="https://www.meetup.com/pydata-indore/events/315411081/" target="_blank" rel="noopener">Meetup event page</a> instead. Either way, you'll be asked a few quick questions, including whether you're participating individually or as a team.</div>
+                    <summary>How is this different from a regular meetup?</summary>
+                    <div class="faq-answer">This is a build event, not a talk event. You show up, pick a track, form a team, and build something in a single focused day. Demos and judging happen at the end. Think science fair, not conference.</div>
                 </details>
+                <details class="faq-item">
+                    <summary>I have more questions.</summary>
+                    <div class="faq-answer">Message us on the WhatsApp group: <a href="https://chat.whatsapp.com/HP25OH3i1MV4kAqZIcH3Lq" target="_blank" rel="noopener">chat.whatsapp.com/HP25OH3i1MV4kAqZIcH3Lq</a>.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== STARTER KIT ==================== -->
+    <section class="content-section alt-bg" id="starter-kit">
+        <div class="container">
+            <div class="topics-header">
+                <span class="section-tag">Starter Kit</span>
+                <h2 class="section-title">Resources to <span class="highlight">Get Started</span></h2>
+                <p class="section-text" style="text-align: center; max-width: 640px; margin: 0 auto;">
+                    Optional, but handy. A few pointers to help you hit the ground running.
+                </p>
+            </div>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h4><span class="resource-ico">✦</span> Google Gemini API</h4>
+                    <ul>
+                        <li><a href="https://ai.google.dev/" target="_blank" rel="noopener">Get your API key</a></li>
+                        <li><a href="https://ai.google.dev/docs" target="_blank" rel="noopener">Gemini API documentation</a></li>
+                        <li><a href="https://github.com/google-gemini/cookbook" target="_blank" rel="noopener">Gemini API Cookbook (examples)</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h4><span class="resource-ico">🐍</span> Python Quickstarts</h4>
+                    <ul>
+                        <li>Google Generative AI Python SDK — <code>pip install google-generativeai</code></li>
+                        <li><a href="https://python.langchain.com/docs/integrations/chat/google_generative_ai" target="_blank" rel="noopener">LangChain + Gemini</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h4><span class="resource-ico">🔌</span> MCP (Model Context Protocol)</h4>
+                    <ul>
+                        <li><a href="https://github.com/modelcontextprotocol/python-sdk" target="_blank" rel="noopener">MCP Python SDK</a></li>
+                        <li><a href="https://modelcontextprotocol.io" target="_blank" rel="noopener">MCP Specification</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h4><span class="resource-ico">📦</span> General</h4>
+                    <ul>
+                        <li><a href="https://help.devpost.com/" target="_blank" rel="noopener">Devpost submission guide</a></li>
+                        <li><a href="https://mlh.io/code-of-conduct" target="_blank" rel="noopener">MLH Code of Conduct</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
