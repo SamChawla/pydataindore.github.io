@@ -207,23 +207,41 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                     <div class="hack-track-head">
                         <span class="track-icon">🎓</span>
                         <div>
-                            <span class="hack-track-num">Track 1</span>
+                            <span class="hack-track-num">Track 01</span>
                             <h3>Learn Better</h3>
                         </div>
                     </div>
                     <p class="hack-track-desc">
-                        Tools that improve how people learn, teach, or upskill. Build for a real learner or
-                        teacher, not an abstract audience — a study group, a junior batch, a community member
-                        prepping for a talk.
+                        Build a tool that makes learning actually stick — for a real learner you can name.
                     </p>
-                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <span class="hack-track-ideas-label">The Problem</span>
+                    <p class="hack-track-problem">
+                        Learning tools are broken. They're built for administrators, not learners. A student
+                        finishes a 2-hour lecture and has zero practice material. A beginner hits a cryptic
+                        Python error and spends 40 minutes on Stack Overflow threads from 2014. A community
+                        speaker spends 10 hours prepping a 45-minute workshop because there's no scaffolding.
+                        The gap isn't content — there's plenty of content. The gap is tooling that turns
+                        content into learning.
+                    </p>
+                    <span class="hack-track-ideas-label">Example Builds — starting points, not requirements</span>
                     <ul class="hack-track-ideas">
-                        <li>AI study companion that generates practice problems from lecture notes</li>
-                        <li>Code review bot for beginners learning Python</li>
-                        <li>Curriculum generator that turns a YouTube playlist or PDF into a structured learning path</li>
-                        <li>Personalized quiz builder that adapts to what you got wrong</li>
-                        <li>Tool that converts documentation into interactive tutorials</li>
+                        <li>A tool that takes a YouTube lecture or PDF and generates practice questions ranked by difficulty</li>
+                        <li>An error message translator that explains Python errors in plain English, tied to <em>your</em> code</li>
+                        <li>A flashcard generator that converts messy class notes or whiteboard photos into Anki-ready decks</li>
+                        <li>An interactive concept map that shows how subtopics connect and what to learn in what order</li>
+                        <li>A code review buddy that gives beginners human-readable feedback, not linter warnings</li>
+                        <li>A workshop prep assistant that generates outlines, code examples, and exercises from a topic</li>
                     </ul>
+                    <div class="hack-track-viasocket">
+                        <span class="hack-track-viasocket-label">⚡ viaSocket Integration Ideas</span>
+                        <p class="hack-track-viasocket-intro">Use viaSocket as your tool's backend — learning that reaches the learner:</p>
+                        <ul class="hack-track-ideas">
+                            <li>Frontend posts a YouTube link/PDF to a webhook → AI generates ranked quiz questions → flow returns JSON. Full app, zero backend code</li>
+                            <li>Scheduled flow pulls due flashcards → AI rephrases them → quizzes the learner on WhatsApp → replies auto-scored, schedule updates itself</li>
+                            <li>Every Python error explained + logged → weekly AI flow emails a micro-lesson on the student's weakest concept</li>
+                            <li>AI answers doubts first → low-confidence ones auto-route to a mentor on Slack → reply forwarded back to the student</li>
+                        </ul>
+                    </div>
                 </article>
 
                 <!-- Track 2 -->
@@ -231,23 +249,41 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                     <div class="hack-track-head">
                         <span class="track-icon">⚡</span>
                         <div>
-                            <span class="hack-track-num">Track 2</span>
+                            <span class="hack-track-num">Track 02</span>
                             <h3>Ship Faster</h3>
                         </div>
                     </div>
                     <p class="hack-track-desc">
-                        Developer productivity tools that plug into workflows developers already use —
-                        CLI, VS Code, GitHub, Jupyter.
+                        Kill a developer's most hated chore. Build a tool that plugs into a workflow they already use.
                     </p>
-                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <span class="hack-track-ideas-label">The Problem</span>
+                    <p class="hack-track-problem">
+                        The code gets written, but everything around it is still manual. Every new project
+                        starts with 45 minutes of identical boilerplate. Every API ships without docs. Every
+                        function ships without tests. Every release needs hand-written changelogs. Notebooks
+                        full of great analysis never get published because reformatting for a blog takes an
+                        hour. Developers waste time on work that should be automated — and the tools to
+                        automate it either don't exist or are half-baked.
+                    </p>
+                    <span class="hack-track-ideas-label">Example Builds — starting points, not requirements</span>
                     <ul class="hack-track-ideas">
-                        <li>Project scaffolder that sets up a full repo with CI, linting, and README in one command</li>
-                        <li>CLI utility that automates a repetitive dev task</li>
-                        <li>MCP server that connects an LLM to a useful data source</li>
-                        <li>Notebook-to-blog converter that turns <code>.ipynb</code> into a publishable post</li>
-                        <li>Code documentation generator that reads your codebase and writes the docs</li>
-                        <li>Data pipeline helper that automates CSV cleaning and validation</li>
+                        <li>A CLI that scaffolds a production-ready Python project (<code>pyproject.toml</code>, CI, linting, README) in one command</li>
+                        <li>A test case generator that reads your Python functions and writes pytest tests including edge cases you missed</li>
+                        <li>An MCP server that connects an LLM to a useful data source — database, spreadsheet, or public API</li>
+                        <li>A notebook-to-blog pipeline that converts <code>.ipynb</code> files into publish-ready Markdown or Medium posts</li>
+                        <li>An API documentation generator that reads your FastAPI/Flask/Django code and writes the docs for you</li>
+                        <li>A git changelog tool that reads commit history and generates structured release notes</li>
                     </ul>
+                    <div class="hack-track-viasocket">
+                        <span class="hack-track-viasocket-label">⚡ viaSocket Integration Ideas</span>
+                        <p class="hack-track-viasocket-intro">One <code>requests.post()</code> and viaSocket closes the loop — back into the repo, not just out of it:</p>
+                        <ul class="hack-track-ideas">
+                            <li>GitHub merge → AI writes changelog + docs → creates the Release, posts to Slack, and opens a docs PR back into the repo</li>
+                            <li>Failing CI test → AI comments the probable root cause on the PR; known flaky runs get auto-retriggered</li>
+                            <li>Notebook-to-blog draft → approve/reject button in Slack → publishes to LinkedIn, X &amp; more in one go</li>
+                            <li>Building the MCP idea? Pair it with viaSocket's MCP server — your agent gets 2,000+ apps as callable tools</li>
+                        </ul>
+                    </div>
                 </article>
 
                 <!-- Track 3 -->
@@ -255,34 +291,72 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                     <div class="hack-track-head">
                         <span class="track-icon">📱</span>
                         <div>
-                            <span class="hack-track-num">Track 3</span>
+                            <span class="hack-track-num">Track 03</span>
                             <h3>Daily Drivers</h3>
                         </div>
                     </div>
                     <p class="hack-track-desc">
-                        Personal and professional tools for everyday use — projects that integrate with tools
-                        people already open daily, like WhatsApp, Slack, or a browser, will stand out.
+                        Build a personal tool you'd open every day. Bonus if it lives inside something people already use.
                     </p>
-                    <span class="hack-track-ideas-label">Ideas to spark thinking</span>
+                    <span class="hack-track-ideas-label">The Problem</span>
+                    <p class="hack-track-problem">
+                        The tools people reach for daily — resumes, invoices, expense tracking, content
+                        publishing, bookmarks — are either overengineered enterprise software or manual
+                        spreadsheet hacks. A freelancer spends 20 minutes per invoice. A job seeker spends
+                        30 minutes tailoring each resume. A developer writes a blog post and never repurposes
+                        it for LinkedIn or Twitter. There's a gap for simple, sharp tools that do one thing
+                        well and save 20 minutes every day.
+                    </p>
+                    <span class="hack-track-ideas-label">Example Builds — starting points, not requirements</span>
                     <ul class="hack-track-ideas">
-                        <li>Dynamic resume builder that pulls from LinkedIn/GitHub and generates tailored resumes</li>
-                        <li>Expense tracker with natural language input (“spent 200 on chai today”)</li>
-                        <li>Content scheduler that drafts and queues social media posts</li>
-                        <li>Bookmark organizer that auto-tags and summarizes saved links</li>
-                        <li>Meeting summarizer that turns transcripts into action items</li>
-                        <li>Event management tool for community organizers</li>
+                        <li>A smart resume tailor that takes your master resume + a job description and generates a version with the right keywords emphasized</li>
+                        <li>A natural language expense tracker — type “chai 20” or “grocery 850 Big Bazaar” and it auto-categorizes and logs</li>
+                        <li>An invoice generator for freelancers with auto GST calculation, UPI QR codes, and natural language input</li>
+                        <li>A content repurposer that turns one blog post into a LinkedIn post, Twitter thread, and Reddit post in the right tone</li>
+                        <li>A bookmark brain that auto-summarizes and tags saved links so you can search by meaning, not just title</li>
+                        <li>A meeting-notes-to-action-items extractor that pulls out decisions, owners, and deadlines from messy notes</li>
                     </ul>
+                    <div class="hack-track-viasocket">
+                        <span class="hack-track-viasocket-label">⚡ viaSocket Integration Ideas</span>
+                        <p class="hack-track-viasocket-intro">WhatsApp/Slack/Gmail is the UI; a viaSocket flow is the app behind it:</p>
+                        <ul class="hack-track-ideas">
+                            <li>“chai 20” on WhatsApp → parsed, AI-categorized, logged to Sheets — and ask “food spend this month?” to get an answer back</li>
+                            <li>Job alert email → AI tailors your resume + drafts the outreach → logs to your tracker → one-tap approve before sending</li>
+                            <li>Invoice sent → scheduled flow tracks payment and sends escalating AI reminders at day 7 and 14</li>
+                            <li>Forward any link to a Telegram bot → AI summarizes + tags it into Notion → ask the bot later, it answers from your saved links</li>
+                        </ul>
+                    </div>
                 </article>
             </div>
 
-            <!-- Cross-cutting prize -->
-            <div class="hack-prize-callout">
-                <span class="hack-prize-badge">🏆 Cross-cutting Prize</span>
-                <h3>Best Use of Gemini API</h3>
-                <p>
-                    Open to any team from any track. Use the Google Gemini API meaningfully in your project
-                    to be eligible. This is MLH's partner prize category — you opt in when you submit on Devpost.
-                </p>
+            <!-- Cross-cutting prizes -->
+            <div class="hack-prize-row">
+                <div class="hack-prize-callout">
+                    <span class="hack-prize-badge">🏆 Cross-cutting Prize</span>
+                    <h3>Best Use of viaSocket</h3>
+                    <p>
+                        Open to any team from any track. Integrate viaSocket meaningfully into your project —
+                        it should solve a real workflow step, not be a bolted-on afterthought.
+                    </p>
+                    <p class="hack-prize-reward">Prize: Lifetime access to viaSocket (paid tier) for the winning team</p>
+                </div>
+                <div class="hack-prize-callout">
+                    <span class="hack-prize-badge">🏆 Cross-cutting Prize</span>
+                    <h3>Best Use of Gemini API</h3>
+                    <p>
+                        Open to any team from any track. Use the Google Gemini API meaningfully. Teams must
+                        provide their Gemini API Key Project Number in the Devpost submission.
+                    </p>
+                    <p class="hack-prize-reward">Prize: MLH partner prize from Google</p>
+                </div>
+                <div class="hack-prize-callout">
+                    <span class="hack-prize-badge">🎁 All Participants</span>
+                    <h3>Swag for Everyone</h3>
+                    <p>
+                        MLH stickers, season stickers, and an event certificate. Hackers who demo get
+                        exclusive “I Demoed” stickers.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -609,6 +683,36 @@ image: "/Assets/images/HackDays/ssi_digital.png"
                     </p>
                     <a href="https://mlh.io/" target="_blank" rel="noopener noreferrer" class="link-arrow" style="display: inline-flex;">
                         Visit MLH
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Partner spotlight — Walkover / viasocket -->
+            <div class="sponsor-spotlight sponsor-spotlight-partner">
+                <div class="sponsor-spotlight-logos" style="flex: 0 0 auto;">
+                    <a href="https://walkover.in/" target="_blank" rel="noopener" class="sponsor-spotlight-logo is-light" aria-label="Walkover">
+                        <img src="/Assets/images/HackDays/Walkoversvg.png" alt="Walkover">
+                    </a>
+                    <a href="https://viasocket.com/" target="_blank" rel="noopener" class="sponsor-spotlight-logo is-light" aria-label="viasocket">
+                        <img src="/Assets/images/HackDays/socketsvg.png" alt="viasocket">
+                    </a>
+                </div>
+                <div style="flex: 1 1 280px;">
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-bottom: var(--space-sm);">
+                        <h3 style="margin: 0;">Walkover</h3>
+                        <span class="hack-role-chip">Technology Partner</span>
+                    </div>
+                    <p style="color: var(--color-gray-400); margin-bottom: var(--space-md);">
+                        Walkover — the Indore-grown product company behind
+                        <a href="https://viasocket.com/" target="_blank" rel="noopener" style="color: var(--color-primary);">viasocket</a>,
+                        an AI-native workflow automation platform — joins Hack Days as our Technology Partner,
+                        backing builders with the tech that helps ideas ship faster on hack day.
+                    </p>
+                    <a href="https://walkover.in/" target="_blank" rel="noopener noreferrer" class="link-arrow" style="display: inline-flex;">
+                        Visit Walkover
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
