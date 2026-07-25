@@ -354,7 +354,10 @@ a {
 .announcement-track {
     display: flex;
     white-space: nowrap;
-    animation: ticker 40s linear infinite;
+    /* Duration is the time to travel half the (duplicated) track, so a longer
+       message scrolls faster at a fixed duration. Keep this slow enough that
+       the whole message stays readable as it passes. */
+    animation: ticker 75s linear infinite;
     will-change: transform;
     cursor: pointer;
 }
@@ -3623,6 +3626,10 @@ section {
     }
     .logo-marquee {
         overflow-x: auto;
+    }
+    /* Ticker holds still on the first (non-aria-hidden) message. */
+    .announcement-track {
+        animation: none;
     }
 }
 

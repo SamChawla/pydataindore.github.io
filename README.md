@@ -18,58 +18,143 @@ PyData Indore is part of the global PyData network, an educational program of Nu
 
 ## 🚀 Quick Start
 
-### Local Development
+This site is built with **[Jekyll](https://jekyllrb.com/)** — the same static-site generator GitHub Pages runs. Pages are Liquid templates with YAML front matter, and the nav, footer, and `<head>` come from shared layouts and includes.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/pydataindore/pydataindore.github.io.git
-   cd pydataindore.github.io
-   ```
+> ⚠️ **You need to run Jekyll — a plain static file server will not work.**
+> Opening the `.html` files directly, or serving them with `python -m http.server` / `npx serve` / VS Code Live Server, shows raw front matter and no navigation or footer, because nothing has processed the templates.
 
-2. Open with a local server (you can use any of these methods):
-   
-   **Using Python:**
-   ```bash
-   python -m http.server 8000
-   ```
-   
-   **Using Node.js:**
-   ```bash
-   npx serve
-   ```
-   
-   **Using VS Code:**
-   Install the "Live Server" extension and click "Go Live"
+### Prerequisites
 
-3. Open `http://localhost:8000` in your browser
+- **Ruby 3.x** with development headers — [installation guide](https://jekyllrb.com/docs/installation/)
+  (on Windows, use [RubyInstaller **with Devkit**](https://rubyinstaller.org/))
+- **Bundler**: `gem install bundler`
 
-### Deploying to GitHub Pages
+Check what you have:
 
-1. Push your changes to the `main` branch
-2. Go to Settings → Pages
-3. Select "Deploy from a branch" and choose `main`
-4. Your site will be live at `https://[username].github.io/[repo-name]`
+```bash
+ruby -v      # should be 3.x
+bundle -v
+```
+
+### Run it locally
+
+```bash
+# 1. Clone your fork
+git clone https://github.com/pydataindore/pydataindore.github.io.git
+cd pydataindore.github.io
+
+# 2. Install dependencies — first time, and after any Gemfile change
+bundle install
+
+# 3. Start the dev server
+bundle exec jekyll serve
+```
+
+Open **<http://localhost:4000>**.
+
+Edits to `.html`, `.css`, and `.js` files rebuild automatically — just refresh. The dev server sends no-cache headers (configured in `_config.yml`), so you should not need a hard refresh.
+
+Useful flags:
+
+| Command | What it does |
+| --- | --- |
+| `bundle exec jekyll serve --livereload` | Auto-refreshes the browser on save |
+| `bundle exec jekyll serve --port 4001` | Use a different port |
+| `bundle exec jekyll serve --no-watch` | Serve without rebuilding on change |
+| `bundle exec jekyll build` | Build once into `_site/` without serving |
+
+**`_config.yml` is the exception** — Jekyll does not watch it. Restart the server after editing it.
+
+### Checking a production build
+
+Local runs use the `development` environment, so Google Analytics never loads and no hits are sent. To build exactly what GitHub Pages will publish:
+
+```bash
+# macOS / Linux
+JEKYLL_ENV=production bundle exec jekyll build
+
+# Windows PowerShell
+$env:JEKYLL_ENV="production"; bundle exec jekyll build
+```
+
+### Troubleshooting
+
+**The site renders unstyled — white background, giant logo, no layout.**
+Your `_site/` output is stale or corrupt. This happens most often when `jekyll build` is run while `jekyll serve` is already watching, since both write to `_site/` at once. Stop every Jekyll process, then:
+
+```bash
+rm -rf _site .jekyll-cache
+bundle exec jekyll build
+```
+
+Because `_site/` is generated and gitignored, deleting it is always safe.
+
+**`bundle install` fails to build native extensions.** Your Ruby install is missing development headers — on Windows, reinstall Ruby using RubyInstaller **with Devkit**.
+
+**`cannot load such file -- webrick`.** Run `bundle install`; `webrick` is in the `Gemfile` for exactly this reason on Ruby 3.x.
+
+## 🌍 Deployment
+
+Deployment is automatic — there is no build step to run and no GitHub Actions workflow.
+
+1. Merge to **`main`** on `pydataindore/pydataindore.github.io`
+2. GitHub Pages rebuilds the site with the `github-pages` gem (Settings → Pages → *Deploy from a branch* → `main` / root)
+3. The change is live at **<https://indore.pydata.org>**, usually within a couple of minutes
+
+Things to know:
+
+- The custom domain comes from the **`CNAME`** file at the repo root. Deleting or editing it breaks `indore.pydata.org` — leave it alone.
+- Only plugins on the [GitHub Pages allowlist](https://pages.github.com/versions/) will run. The `Gemfile` pins the `github-pages` gem so your local build matches production; keep it that way rather than adding arbitrary plugins.
+- **Never commit `_site/`.** It is build output and is gitignored.
+- If a deploy looks wrong, check the repo's *Actions* tab — the `pages-build-deployment` run reports Jekyll build failures there.
 
 ## 📁 Project Structure
 
 ```
 pydataindore.github.io/
+├── _config.yml                   # Site-wide settings, defaults, build config
+├── Gemfile                       # Pins the github-pages gem (matches production)
+├── CNAME                         # Custom domain — do not remove
+│
+├── _layouts/
+│   └── default.html              # The page shell: <head>, meta/OG tags, scripts
+├── _includes/
+│   ├── nav.html                  # Navigation (edit links here, once)
+│   ├── footer.html               # Footer
+│   ├── announcement.html         # Site-wide moving announcement ticker
+│   ├── cookie-consent.html       # Consent banner (gates analytics)
+│   └── analytics.html            # GA4 — production builds only
+│
 ├── index.html                    # Homepage
 ├── about.html                    # About PyData and our chapter
 ├── events.html                   # Upcoming and past events
-├── code-of-conduct.html          # Community guidelines
-├── sponsors.html                 # Sponsorship information
+├── team.html                     # Team & organizers
+├── sponsors.html                 # Sponsors and partners
 ├── contact.html                  # Contact form and FAQs
+├── volunteer.html                # Volunteer & co-organizer framework
+├── code-of-conduct.html          # Community guidelines
+├── privacy-policy.html           # Privacy policy
+├── share.html                    # Link-hub page for socials / QR
+│
+│   # Event detail pages — one per event
+├── meet-1.html                   # Meet #1 (23 May 2026)
+├── hack-days.html                # PyData Indore Hack Days (18 Jul 2026)
+├── ikigai-2026.html              # IKIGAI 2026 — community partnership
+│
 ├── Assets/
 │   ├── CSS/
-│   │   └── style.css            # Main stylesheet
+│   │   ├── style.css             # Main stylesheet — shared by every page
+│   │   ├── hack-days.css         # Page-specific (loaded via `extra_css`)
+│   │   └── ikigai-2026.css       # Page-specific (loaded via `extra_css`)
 │   ├── JavaScript/
-│   │   └── main.js              # JavaScript functionality
-│   └── images/                  # Images and logos
-│       ├── pydata_banner_logo.jpeg
-│       ├── pydata_logo.png
-│       ├── PyData_logo1.webp
+│   │   └── main.js               # Nav, theme switcher, carousels, forms
+│   └── images/
+│       ├── Logos/                # Partner & sponsor logos
+│       ├── Team/                 # Team photos
+│       ├── Meetup1/ HackDays/ IKIGAI/   # Per-event assets
 │       └── ...
+│
+├── _site/                        # Build output — generated, gitignored
 └── README.md                     # This file
 ```
 
@@ -86,21 +171,23 @@ pydataindore.github.io/
 
 ## 🛠 Technologies Used
 
+- **Jekyll + Liquid**: Static site generation — shared layouts, includes, and pretty URLs
 - **HTML5**: Semantic markup
 - **CSS3**: Custom properties, Grid, Flexbox, animations
-- **JavaScript (ES6+)**: Vanilla JS for interactivity
+- **JavaScript (ES6+)**: Vanilla JS for interactivity — no frameworks, no bundler
 - **Google Fonts**: Space Mono and Syne font families
-- **GitHub Pages**: Hosting platform
+- **GitHub Pages**: Hosting and automatic builds, on the custom domain `indore.pydata.org`
 
 ## 🛠 Customization
 
 ### Updating Content
 
-- **Events**: Edit `events.html` to add/update events
+- **Events**: Edit `events.html` for the listing. Events with their own page (`hack-days.html`, `ikigai-2026.html`, …) also get a preview card on `index.html`
 - **Sponsors**: Update `sponsors.html` with sponsor information
-- **Contact Info**: Update email addresses and social links in all HTML files
-- **Images**: Add new images to `Assets/images/` and reference them in HTML files
-- **Team Members**: Update team information in `index.html` and `about.html`
+- **Team Members**: Update `team.html`
+- **Contact info & social links**: Edit `_includes/footer.html` — it is shared by every page
+- **Navigation**: Edit `_includes/nav.html`
+- **Images**: Add to `Assets/images/` (per-event subfolder where it makes sense) and reference with a root-relative path, e.g. `/Assets/images/IKIGAI/poster.jpeg`
 
 ### Styling
 
@@ -110,7 +197,7 @@ The CSS uses custom properties (CSS variables) for easy theming:
 :root {
     --color-primary: #a3e635;       /* Electric Lime */
     --color-primary-dark: #84cc16;  /* Darker Lime */
-    --color-primary-light: #bef264; /* Lighter Lime */
+    --color-primary-light: #d9f99d; /* Lighter Lime */
     --color-accent: #e879f9;        /* Hot Magenta */
     --color-accent-light: #f0abfc;  /* Light Magenta */
     --color-accent-dark: #d946ef;   /* Dark Magenta */
@@ -119,16 +206,39 @@ The CSS uses custom properties (CSS variables) for easy theming:
 }
 ```
 
+The site also ships alternate themes (`cyberpunk`, `coral`, `amber`) as `[data-theme="…"]` overrides on `:root`, toggled by the floating switcher that `main.js` injects. **Always style with these variables rather than hardcoded hex values** — anything hardcoded will ignore the user's chosen theme.
+
 You can customize the theme by modifying these variables in `Assets/CSS/style.css`.
 
 ### Adding New Pages
 
-1. Copy an existing HTML file (e.g., `about.html`) as a template
-2. Update the `<title>` tag in the `<head>` section
-3. Update the navigation `active` class on the corresponding `<li><a>` element
-4. Modify the content sections
-5. Add the page link to the navigation menu in all HTML files
-6. Ensure footer links are consistent across all pages
+Create an `.html` file at the repo root containing **only your page content** — no `<html>`, `<head>`, `<nav>`, or `<footer>`. Those come from `_layouts/default.html`. Start it with YAML front matter:
+
+```yaml
+---
+permalink: "/your-page/"                     # the URL — trailing slash, no .html
+title: "Your Page | PyData Indore"           # <title> + OG/Twitter title
+description: "One or two sentences."         # meta description + social preview
+active: "events"                             # which nav item to highlight
+extra_css: "/Assets/CSS/your-page.css"       # optional, page-specific styles
+image: "/Assets/images/your-og-image.jpg"    # optional, social preview image
+---
+```
+
+Front matter reference:
+
+| Key | Required | Notes |
+| --- | --- | --- |
+| `permalink` | yes | Pretty URL, e.g. `/hack-days/`. Always link to pages this way — never `page.html`. |
+| `title` | yes | Shown in the browser tab and social previews. |
+| `description` | yes | Used for SEO and link previews. |
+| `active` | yes | One of `home`, `about`, `events`, `team`, `coc`, `sponsors`. Event pages use `events`. |
+| `extra_css` | no | Only for genuinely page-specific styling; shared styles belong in `style.css`. |
+| `image` | no | Defaults to the PyData banner (set in `_config.yml`). |
+
+The `layout` is applied automatically by the defaults in `_config.yml` — you do not need to declare it.
+
+**To add the page to the main navigation**, edit `_includes/nav.html` — once. It is shared by every page, so there is no longer any need to update links file by file.
 
 ## 📝 Content Guidelines
 
@@ -151,11 +261,17 @@ We welcome contributions! Here's how to help:
    git fetch upstream
    git checkout -b feature/your-feature upstream/main
    ```
-4. **Make your changes**, then commit:
+4. **Make your changes**, then **check them locally** before committing:
+   ```bash
+   bundle exec jekyll serve      # then open http://localhost:4000
+   ```
+   Look at the page you changed at both desktop and mobile widths, and click through
+   any links you added. See [Quick Start](#-quick-start) if this is your first run.
+5. **Commit**:
    ```bash
    git commit -m 'PYD-XX Description of change'
    ```
-5. **Push** to your fork and open a Pull Request:
+6. **Push** to your fork and open a Pull Request:
    ```bash
    git push origin feature/your-feature
    ```
@@ -219,11 +335,14 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## 🔧 Development Notes
 
-- All HTML files share the same navigation structure - update consistently across all pages
-- The site uses a single CSS file (`Assets/CSS/style.css`) for all styling
-- JavaScript functionality is centralized in `Assets/JavaScript/main.js`
-- Images should be optimized before adding to `Assets/images/`
-- The site is designed to work without a build process - just static HTML/CSS/JS
+- **Navigation and footer live in `_includes/`** — edit `nav.html` or `footer.html` once, not every page
+- **Link with pretty URLs**: `/events/`, not `/events.html`. Use root-relative paths (`/Assets/...`) so links work from nested URLs
+- **Styling** is centralized in `Assets/CSS/style.css`. Reach for a page-specific file via `extra_css` only when the styles genuinely belong to one page
+- **Theming** uses CSS custom properties with `[data-theme="…"]` overrides, so use `var(--color-primary)` and friends rather than hardcoding hex values — otherwise the theme switcher won't affect your work
+- **JavaScript** is centralized in `Assets/JavaScript/main.js` — vanilla, no build step
+- **Optimize images before committing.** Resize to roughly 2× their displayed width and export as JPEG/WebP; multi-MB files slow the site down noticeably
+- **Analytics only run in production** and only after consent, so local development never sends hits
+- **Never commit `_site/`** — it is generated output
 
 ## 🙏 Acknowledgments
 

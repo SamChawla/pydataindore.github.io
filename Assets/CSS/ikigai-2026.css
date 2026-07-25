@@ -1,0 +1,213 @@
+/* ========================================
+   IKIGAI 2026 — Community Partner page
+   Page-specific styles only. Layout primitives
+   (event-detail-layout, event-detail-chip, content-card,
+   topics-header, btn…) come from style.css.
+   ======================================== */
+
+/* style.css only gradients .section-title .highlight — extend it to the
+   page-header h1 so "2026" picks up the same treatment. */
+.page-header-content h1 .highlight {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Deadline chip — accent rather than primary so it reads as time-sensitive
+   next to the neutral fact chips. */
+.event-detail-chip.chip-deadline {
+    background: var(--glass-bg);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
+/* --- Partner disclaimer -------------------------------------------------
+   Deliberately loud: this page describes an event PyData Indore does NOT
+   organise, so the distinction has to survive skim-reading. */
+.partner-notice {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    background: var(--glass-bg);
+    border: 1px solid var(--color-accent);
+    border-left-width: 4px;
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.partner-notice-ico {
+    flex: 0 0 auto;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.partner-notice-body { min-width: 0; }
+
+.partner-notice-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: var(--space-sm);
+}
+
+.partner-notice-body p {
+    color: var(--color-gray-400);
+    margin: 0 0 var(--space-sm);
+    font-size: 0.95rem;
+}
+
+.partner-notice-body p:last-child { margin-bottom: 0; }
+.partner-notice-body strong { color: var(--color-gray-200); }
+
+/* --- Poster ------------------------------------------------------------- */
+.ikigai-poster-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    gap: var(--space-3xl);
+    align-items: start;
+}
+
+.ikigai-poster {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-lg);
+}
+
+.ikigai-poster-caption {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--color-gray-600);
+    text-align: center;
+    margin-top: var(--space-sm);
+    line-height: 1.5;
+}
+
+/* --- Two-phase format --------------------------------------------------- */
+.phase-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+}
+
+.phase-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+}
+
+.phase-num {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    color: var(--color-primary);
+    margin-bottom: var(--space-sm);
+}
+
+.phase-card h3 {
+    font-size: 1.15rem;
+    margin: 0 0 var(--space-xs);
+}
+
+.phase-mode {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-md);
+}
+
+.phase-card ul { list-style: none; margin: var(--space-md) 0 0; padding: 0; }
+
+.phase-card li {
+    position: relative;
+    padding-left: var(--space-lg);
+    margin-bottom: var(--space-sm);
+    color: var(--color-gray-400);
+    font-size: 0.92rem;
+}
+
+.phase-card li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+/* --- Tracks ------------------------------------------------------------- */
+.ikigai-track-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+}
+
+.ikigai-track {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-lg) var(--space-xl);
+    transition: border-color var(--transition-base);
+}
+
+.ikigai-track:hover { border-color: var(--color-primary); }
+
+.ikigai-track-ico { font-size: 1.6rem; display: block; margin-bottom: var(--space-sm); }
+
+.ikigai-track h3 { font-size: 1rem; margin: 0; }
+
+.ikigai-track.is-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--color-gray-500);
+    border-style: dashed;
+}
+
+/* --- "Why take part" definition list ------------------------------------ */
+.ikigai-why {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));   /* even 2x2, not 3+1 */
+    gap: var(--space-lg) var(--space-xl);
+    margin: var(--space-xl) 0 0;
+}
+
+.ikigai-why dt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: var(--space-xs);
+}
+
+.ikigai-why dd {
+    margin: 0;
+    color: var(--color-gray-400);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+/* --- Responsive --------------------------------------------------------- */
+@media (max-width: 900px) {
+    .ikigai-poster-grid { grid-template-columns: 1fr; gap: var(--space-2xl); }
+    .ikigai-poster { max-width: 340px; margin: 0 auto; }
+}
+
+@media (max-width: 640px) {
+    .partner-notice { flex-direction: column; gap: var(--space-md); padding: var(--space-lg); }
+    .ikigai-why { grid-template-columns: 1fr; }
+}

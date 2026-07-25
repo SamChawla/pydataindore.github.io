@@ -1,19 +1,23 @@
-<!-- Moving announcement ticker — promotes the upcoming Hack Days mini hackathon.
-     The whole bar is a link to /hack-days/. The track is duplicated (two identical
-     halves) so the CSS ticker (translateX 0 → -50%) loops seamlessly. -->
+<!-- Moving announcement ticker — currently promoting IKIGAI 2026, an event
+     organised by AITR Indore that PyData Indore is a Community Partner for.
+     The "Community Partner" wording is load-bearing: this bar shows on every
+     page, so it must never read as an event we run. The whole bar links to
+     /ikigai-2026/. The track is duplicated (two identical halves) so the CSS
+     ticker (translateX 0 → -50%) loops seamlessly. -->
 <div class="announcement-bar" role="region" aria-label="Site announcement">
-    <a href="/hack-days/" class="announcement-track"
-       aria-label="PyData Indore Hack Days — Mini Hackathon on Saturday 18 July 2026 at SSi Digital, Indore. View details and register.">
+    <a href="/ikigai-2026/" class="announcement-track"
+       aria-label="PyData Indore is a Community Partner for IKIGAI 2026, a 36-hour national hackathon at AITR Campus, Indore, 21 to 23 August 2026. View details.">
         {%- comment -%} Two identical halves × repeated message → seamless, gap-free loop on wide screens {%- endcomment -%}
         {%- for half in (1..2) -%}
         {%- for i in (1..4) -%}
         <span class="announcement-item" aria-hidden="{% if half == 1 and i == 1 %}false{% else %}true{% endif %}">
             <span class="announcement-dot"></span>
-            🚀 PyData Indore Hack&nbsp;Days
-            <span class="announcement-sep">·</span> Mini Hackathon
-            <span class="announcement-sep">·</span> Sat 18 July 2026
-            <span class="announcement-sep">·</span> SSi Digital, Indore
-            <span class="announcement-sep">·</span> Register now →
+            🤝 Community Partner
+            <span class="announcement-sep">·</span> IKIGAI&nbsp;2026
+            <span class="announcement-sep">·</span> 36-hour National Hackathon
+            <span class="announcement-sep">·</span> 21–23 Aug 2026
+            <span class="announcement-sep">·</span> AITR Campus, Indore
+            <span class="announcement-sep">·</span> Details →
         </span>
         {%- endfor -%}
         {%- endfor -%}
