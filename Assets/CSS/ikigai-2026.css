@@ -14,6 +14,14 @@
     background-clip: text;
 }
 
+/* Deadline chip — accent rather than primary so it reads as time-sensitive
+   next to the neutral fact chips. */
+.event-detail-chip.chip-deadline {
+    background: var(--glass-bg);
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+}
+
 /* --- Partner disclaimer -------------------------------------------------
    Deliberately loud: this page describes an event PyData Indore does NOT
    organise, so the distinction has to survive skim-reading. */
