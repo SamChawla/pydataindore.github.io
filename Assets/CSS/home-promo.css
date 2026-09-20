@@ -16,6 +16,10 @@
     box-shadow: var(--shadow-xl);
 }
 
+.home-promo:not([open]) {
+    display: none;
+}
+
 .home-promo::backdrop {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(5px);
