@@ -7,5 +7,7 @@
 #
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
+gem "github-pages", "232", group: :jekyll_plugins
 gem "webrick" # required for `jekyll serve` on Ruby 3.x
+gem "csv" # required for `jekyll serve` on Ruby 3.x
+gem "bigdecimal" # required by Liquid on Ruby 3.4+
